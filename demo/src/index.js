@@ -1,14 +1,23 @@
-import React, {Component} from 'react'
-import {render} from 'react-dom'
+import React, { Component } from 'react'
+import { render } from 'react-dom'
+import { injectGlobal } from 'styled-components'
+import ReactStory from 'react-story'
+import stories from './stories'
 
-import Example from '../../src'
+injectGlobal`
+  * { box-sizing: border-box; }
+  html, body, #demo {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+`
 
 class Demo extends Component {
   render() {
-    return <div>
-      <h1>redcarpet Demo</h1>
-      <Example/>
-    </div>
+    return (
+      <ReactStory stories={stories} />
+    )
   }
 }
 

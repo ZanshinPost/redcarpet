@@ -1,9 +1,7 @@
-import React, {Component} from 'react'
+import RedCarpet from './components/RedCarpet'
+import Question from './components/Question'
 
-export default class extends Component {
-  render() {
-    return <div>
-      <h2>Welcome to React components</h2>
-    </div>
-  }
+export {
+  RedCarpet as default,
+  Question
 }
